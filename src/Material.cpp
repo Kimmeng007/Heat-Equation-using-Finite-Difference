@@ -1,4 +1,4 @@
-#include "material.h"
+#include "Material.h"
 namespace heat{
     double Material::getThermalDiffusivity() const {
         return conductivity / (density * specificHeat);

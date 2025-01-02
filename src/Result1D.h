@@ -4,6 +4,7 @@
 #include <iostream>
 #include "HeatEquationSolver1D.h"
 #include "Material.h"
+#include "Visualization.h"
 
 /**
  * @brief A class to solve and visualize the 1D heat equation for a material
