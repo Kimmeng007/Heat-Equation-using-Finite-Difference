@@ -7,7 +7,7 @@ namespace heat {
         Heatsource1D heatSource(t_max_, L_, f_);  /**< Initialize the heat source with the appropriate parameters */
 
         // Initialize the HeatEquationSolver1D with the provided parameters
-        HeatEquationSolver1D solver(material_, heatSource, L_, t_max_, u0_, N_s_, N_t_);
+        HeatEquationSolver1D solver(material_, heatSource, L_, t_max_, u0_, N_, M_);
 
         // Solve the heat equation using the finite difference method
         solver.solve();
@@ -16,10 +16,10 @@ namespace heat {
         Visualization visualizer("1D Heat Equation Visualization");
 
         // Create a static array to hold the temperature profiles for each time step
-        const double* temperatureProfiles[N_t_];  /**< Holds temperature profiles at different time steps */
+        const double* temperatureProfiles[M_];  /**< Holds temperature profiles at different time steps */
 
         // Extract the temperature profile at each time step from the solver
-        for (int t = 0; t < N_t_; ++t) {
+        for (int t = 0; t < M_; ++t) {
             temperatureProfiles[t] = solver.getTemperatureAtTime(t);  /**< Access the temperature profile at time step t */
         }
 
@@ -27,7 +27,7 @@ namespace heat {
         double maxTemperature = u0_;  /**< Maximum temperature for color scaling in visualization */
 
         // Render the temperature profiles at all time steps
-        visualizer.renderMultiple2DTemperatureProfiles(temperatureProfiles, N_t_, N_s_, maxTemperature);
+        visualizer.renderMultiple2DTemperatureProfiles(temperatureProfiles, M_, N_, maxTemperature);
     }
 
 }

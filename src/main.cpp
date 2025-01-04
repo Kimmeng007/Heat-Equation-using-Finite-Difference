@@ -17,8 +17,8 @@ int main(){
     double t_max = 16.0;  // Maximum simulation time in seconds
     double L = 1.0;       // Length of the domain in meters
     double u0 = 286.15;    // Initial temperature in Kelvin
-    int N_s = 1001;        // Number of spatial points
-    int N_t = 100;        // Number of time steps
+    int N = 1001;        // Number of spatial points
+    int M = 100;        // Number of time steps
     double f = 1353.15;     // Heat source intensity factor in Kelvin
 
     // Iterate through each material and solve the heat equation
@@ -26,7 +26,7 @@ int main(){
         std::cout << "Simulating for material: " << material.name << "\n";
 
         // Set up the simulation for the current material
-        heat::Result1D simulation(f, t_max, L, u0, N_s, N_t, material);
+        heat::Result1D simulation(f, t_max, L, u0, N, M, material);
 
         // Run the simulation
         simulation.runSimulation();

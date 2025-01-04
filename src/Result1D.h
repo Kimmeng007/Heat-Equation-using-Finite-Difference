@@ -18,8 +18,8 @@ namespace heat{
         double t_max_; /** The maximum simulation time*/
         double L_; /** Length of the domain */
         double u0_; /** Initial temperature */
-        int N_s_; /** Number of spatial divisions */
-        int N_t_; /** Number of time steps */
+        int N_; /** Number of spatial divisions */
+        int M_; /** Number of time steps */
         Material material_; /** The material for the simulation */
 
     public:
@@ -30,12 +30,12 @@ namespace heat{
          * @param tmax : The maximum simulation time
          * @param L : The length of the domain
          * @param u0 : The initial temperature of the domain
-         * @param N_s : Number of spatial divisions
-         * @param N_t : Number of time steps
+         * @param N : Number of spatial divisions
+         * @param M : Number of time steps
          * @param material : Material properties for the simulation
          */
-        Result1D(double f, double tmax, double L, double u0, int N_s, int N_t, const Material& material)
-        : f_(f), t_max_(tmax), L_(L), u0_(u0), N_s_(N_s), N_t_(N_t), material_(material) {}
+        Result1D(double f, double tmax, double L, double u0, int N, int M, const Material& material)
+        : f_(f), t_max_(tmax), L_(L), u0_(u0), N_(N), M_(M), material_(material) {}
 
         /**
          * @brief Run the heat equation solver and visualize results
