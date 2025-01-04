@@ -1,0 +1,10 @@
+var annotated_dup =
+[
+    [ "heat", "namespaceheat.html", [
+      [ "HeatEquationSolver1D", "classheat_1_1_heat_equation_solver1_d.html", "classheat_1_1_heat_equation_solver1_d" ],
+      [ "Heatsource1D", "classheat_1_1_heatsource1_d.html", "classheat_1_1_heatsource1_d" ],
+      [ "Material", "structheat_1_1_material.html", "structheat_1_1_material" ],
+      [ "Result1D", "classheat_1_1_result1_d.html", "classheat_1_1_result1_d" ]
+    ] ],
+    [ "Visualization", "class_visualization.html", "class_visualization" ]
+];

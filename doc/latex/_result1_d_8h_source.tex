@@ -1,0 +1,35 @@
+\doxysection{Result1\+D.\+h}
+\hypertarget{_result1_d_8h_source}{}\label{_result1_d_8h_source}\index{D:/ENSIIE\_M1/PAP/Chaleur/src/Result1D.h@{D:/ENSIIE\_M1/PAP/Chaleur/src/Result1D.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ RESULT1D\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ RESULT1D\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}HeatEquationSolver1D.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Material.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Visualization.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceheat}{heat}}\{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classheat_1_1_result1_d_a494e07577b8f0d919d0ec7322ab6c1a9}{Result1D}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ f\_;\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ t\_max\_;\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ L\_;\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ u0\_;\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ N\_s\_;\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ N\_t\_;\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structheat_1_1_material}{Material}}\ material\_;\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classheat_1_1_result1_d_a494e07577b8f0d919d0ec7322ab6c1a9}{Result1D}}(\textcolor{keywordtype}{double}\ f,\ \textcolor{keywordtype}{double}\ tmax,\ \textcolor{keywordtype}{double}\ L,\ \textcolor{keywordtype}{double}\ u0,\ \textcolor{keywordtype}{int}\ N\_s,\ \textcolor{keywordtype}{int}\ N\_t,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structheat_1_1_material}{Material}}\&\ material)}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ :\ f\_(f),\ t\_max\_(tmax),\ L\_(L),\ u0\_(u0),\ N\_s\_(N\_s),\ N\_t\_(N\_t),\ material\_(material)\ \{\}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classheat_1_1_result1_d_ac86f7124e5b23349737a0106574bbdad}{runSimulation}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \};}
+\DoxyCodeLine{00045\ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

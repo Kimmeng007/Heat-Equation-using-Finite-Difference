@@ -1,0 +1,66 @@
+\doxysection{heat\+::Result1D Class Reference}
+\hypertarget{classheat_1_1_result1_d}{}\label{classheat_1_1_result1_d}\index{heat::Result1D@{heat::Result1D}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classheat_1_1_result1_d_a494e07577b8f0d919d0ec7322ab6c1a9}{Result1D}} (double f, double tmax, double L, double u0, int N\+\_\+s, int N\+\_\+t, const \mbox{\hyperlink{structheat_1_1_material}{Material}} \&material)
+\begin{DoxyCompactList}\small\item\em Construct a new Final1D object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classheat_1_1_result1_d_ac86f7124e5b23349737a0106574bbdad}{run\+Simulation}} ()
+\begin{DoxyCompactList}\small\item\em Run the heat equation solver and visualize results. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classheat_1_1_result1_d_a494e07577b8f0d919d0ec7322ab6c1a9}\index{heat::Result1D@{heat::Result1D}!Result1D@{Result1D}}
+\index{Result1D@{Result1D}!heat::Result1D@{heat::Result1D}}
+\doxysubsubsection{\texorpdfstring{Result1D()}{Result1D()}}
+{\footnotesize\ttfamily \label{classheat_1_1_result1_d_a494e07577b8f0d919d0ec7322ab6c1a9} 
+heat\+::\+Result1\+D\+::\+Result1D (\begin{DoxyParamCaption}\item[{double}]{f}{, }\item[{double}]{tmax}{, }\item[{double}]{L}{, }\item[{double}]{u0}{, }\item[{int}]{N\+\_\+s}{, }\item[{int}]{N\+\_\+t}{, }\item[{const \mbox{\hyperlink{structheat_1_1_material}{Material}} \&}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new Final1D object. 
+
+The material for the simulation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & \+: The intensity factor of the heat source \\
+\hline
+{\em tmax} & \+: The maximum simulation time \\
+\hline
+{\em L} & \+: The length of the domain \\
+\hline
+{\em u0} & \+: The initial temperature of the domain \\
+\hline
+{\em N\+\_\+s} & \+: Number of spatial divisions \\
+\hline
+{\em N\+\_\+t} & \+: Number of time steps \\
+\hline
+{\em material} & \+: \doxylink{structheat_1_1_material}{Material} properties for the simulation \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classheat_1_1_result1_d_ac86f7124e5b23349737a0106574bbdad}\index{heat::Result1D@{heat::Result1D}!runSimulation@{runSimulation}}
+\index{runSimulation@{runSimulation}!heat::Result1D@{heat::Result1D}}
+\doxysubsubsection{\texorpdfstring{runSimulation()}{runSimulation()}}
+{\footnotesize\ttfamily \label{classheat_1_1_result1_d_ac86f7124e5b23349737a0106574bbdad} 
+void heat\+::\+Result1\+D\+::run\+Simulation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Run the heat equation solver and visualize results. 
+
+\texorpdfstring{$<$}{<} Initialize the heat source with the appropriate parameters
+
+\texorpdfstring{$<$}{<} Holds temperature profiles at different time steps
+
+\texorpdfstring{$<$}{<} Access the temperature profile at time step t
+
+\texorpdfstring{$<$}{<} Maximum temperature for color scaling in visualization
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+ENSIIE\+\_\+\+M1/\+PAP/\+Chaleur/src/Result1\+D.\+h\item 
+D\+:/\+ENSIIE\+\_\+\+M1/\+PAP/\+Chaleur/src/Result1\+D.\+cpp\end{DoxyCompactItemize}

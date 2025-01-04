@@ -4,7 +4,7 @@
 #include "Result1D.h"
 #include "Visualization.h"
 
-int main(int argc, char* argv[]){
+int main(){
     // Materials from Table 2
     std::vector<heat::Material> materials = {
         heat::copper, 
@@ -14,12 +14,12 @@ int main(int argc, char* argv[]){
     };
 
     // Simulation parameters
-    double t_max = 10.0;  // Maximum simulation time in seconds
+    double t_max = 16.0;  // Maximum simulation time in seconds
     double L = 1.0;       // Length of the domain in meters
-    double u0 = 300.0;    // Initial temperature in Kelvin
-    int N_s = 100;        // Number of spatial points
+    double u0 = 286.15;    // Initial temperature in Kelvin
+    int N_s = 1001;        // Number of spatial points
     int N_t = 100;        // Number of time steps
-    double f = 100.0;     // Heat source intensity factor
+    double f = 1353.15;     // Heat source intensity factor in Kelvin
 
     // Iterate through each material and solve the heat equation
     for (const auto& material : materials) {

@@ -1,0 +1,93 @@
+\doxysection{heat Namespace Reference}
+\hypertarget{namespaceheat}{}\label{namespaceheat}\index{heat@{heat}}
+
+
+Solves the one-\/dimensional heat equation for a given material and heat source.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classheat_1_1_heat_equation_solver1_d}{Heat\+Equation\+Solver1D}}
+\item 
+class \mbox{\hyperlink{classheat_1_1_heatsource1_d}{Heatsource1D}}
+\item 
+struct \mbox{\hyperlink{structheat_1_1_material}{Material}}
+\item 
+class \mbox{\hyperlink{classheat_1_1_result1_d}{Result1D}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespaceheat_ad167fdbe887e8b8a99bcec1d58acbb54}{operator$<$$<$}} (std\+::ostream \&st, const \mbox{\hyperlink{structheat_1_1_material}{Material}} \&mat)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespaceheat_aedd14aa47340c4f2945b3c4a0b02c6bf}\label{namespaceheat_aedd14aa47340c4f2945b3c4a0b02c6bf} 
+const \mbox{\hyperlink{structheat_1_1_material}{Material}} {\bfseries copper} ("{}Copper"{}, 389, 8940, 380)
+\item 
+const \mbox{\hyperlink{structheat_1_1_material}{Material}} \mbox{\hyperlink{namespaceheat_adc96ab3fd5bba7e3b146dcf36e72d524}{iron}} ("{}Iron"{}, 80.\+2, 7874, 440)
+\item 
+const \mbox{\hyperlink{structheat_1_1_material}{Material}} \mbox{\hyperlink{namespaceheat_a6b477618a0a4ed89514d2dae13b625d7}{glass}} ("{}Glass"{}, 1.\+2, 2530, 840)
+\item 
+const \mbox{\hyperlink{structheat_1_1_material}{Material}} \mbox{\hyperlink{namespaceheat_a3d8e8bf431826a5d5b0ac7a830f9e5ac}{polystyrene}} ("{}Polystyrene"{}, 0.\+1, 1040, 1200)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Solves the one-\/dimensional heat equation for a given material and heat source. 
+
+A class to solve and visualize the 1D heat equation for a material.
+
+Represents the physical properties of a material related to heat transfer.
+
+class representing the heat source F(x,t)
+
+This struct models the thermal properties of a material, including its name, thermal conductivity, density, and specific heat capacity. These properties are crucial in solving heat transfer problems. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceheat_ad167fdbe887e8b8a99bcec1d58acbb54}\index{heat@{heat}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!heat@{heat}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily \label{namespaceheat_ad167fdbe887e8b8a99bcec1d58acbb54} 
+std\+::ostream \& heat\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{st}{, }\item[{const \mbox{\hyperlink{structheat_1_1_material}{Material}} \&}]{mat}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em st} & \+: Reference to the output stream object \\
+\hline
+{\em mat} & \+: Reference to the \doxylink{structheat_1_1_material}{Material} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& Reference to the output stream object 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceheat_a6b477618a0a4ed89514d2dae13b625d7}\index{heat@{heat}!glass@{glass}}
+\index{glass@{glass}!heat@{heat}}
+\doxysubsubsection{\texorpdfstring{glass}{glass}}
+{\footnotesize\ttfamily \label{namespaceheat_a6b477618a0a4ed89514d2dae13b625d7} 
+const \mbox{\hyperlink{structheat_1_1_material}{Material}} heat\+::glass (\begin{DoxyParamCaption}\item[{"{}Glass"{}}]{}{, }\item[{1.}]{2}{, }\item[{2530}]{}{, }\item[{840}]{}{}\end{DoxyParamCaption})}
+
+Iron properties
+
+Represents the material Iron with predefined properties \Hypertarget{namespaceheat_adc96ab3fd5bba7e3b146dcf36e72d524}\index{heat@{heat}!iron@{iron}}
+\index{iron@{iron}!heat@{heat}}
+\doxysubsubsection{\texorpdfstring{iron}{iron}}
+{\footnotesize\ttfamily \label{namespaceheat_adc96ab3fd5bba7e3b146dcf36e72d524} 
+const \mbox{\hyperlink{structheat_1_1_material}{Material}} heat\+::iron (\begin{DoxyParamCaption}\item[{"{}Iron"{}}]{}{, }\item[{80.}]{2}{, }\item[{7874}]{}{, }\item[{440}]{}{}\end{DoxyParamCaption})}
+
+Copper properties
+
+Represents the material Copper with predefined properties \Hypertarget{namespaceheat_a3d8e8bf431826a5d5b0ac7a830f9e5ac}\index{heat@{heat}!polystyrene@{polystyrene}}
+\index{polystyrene@{polystyrene}!heat@{heat}}
+\doxysubsubsection{\texorpdfstring{polystyrene}{polystyrene}}
+{\footnotesize\ttfamily \label{namespaceheat_a3d8e8bf431826a5d5b0ac7a830f9e5ac} 
+const \mbox{\hyperlink{structheat_1_1_material}{Material}} heat\+::polystyrene (\begin{DoxyParamCaption}\item[{"{}Polystyrene"{}}]{}{, }\item[{0.}]{1}{, }\item[{1040}]{}{, }\item[{1200}]{}{}\end{DoxyParamCaption})}
+
+Glass properties
+
+Represents the material Glass with predefined properties 

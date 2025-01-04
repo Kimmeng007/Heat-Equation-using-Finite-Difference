@@ -1,0 +1,64 @@
+\doxysection{heat\+::Heatsource1D Class Reference}
+\hypertarget{classheat_1_1_heatsource1_d}{}\label{classheat_1_1_heatsource1_d}\index{heat::Heatsource1D@{heat::Heatsource1D}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classheat_1_1_heatsource1_d_a58ccc61695e3646735310e99837b8bed}{Heatsource1D}} (double t\+\_\+max, double L, double f)
+\begin{DoxyCompactList}\small\item\em initialize the the heat source parameters \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classheat_1_1_heatsource1_d_a986c6911cf24bc06f445145e9d758f9e}{F}} (double x, double t) const
+\begin{DoxyCompactList}\small\item\em compute the heat source value at position x and time t \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classheat_1_1_heatsource1_d_a58ccc61695e3646735310e99837b8bed}\index{heat::Heatsource1D@{heat::Heatsource1D}!Heatsource1D@{Heatsource1D}}
+\index{Heatsource1D@{Heatsource1D}!heat::Heatsource1D@{heat::Heatsource1D}}
+\doxysubsubsection{\texorpdfstring{Heatsource1D()}{Heatsource1D()}}
+{\footnotesize\ttfamily \label{classheat_1_1_heatsource1_d_a58ccc61695e3646735310e99837b8bed} 
+heat\+::\+Heatsource1\+D\+::\+Heatsource1D (\begin{DoxyParamCaption}\item[{double}]{t\+\_\+max}{, }\item[{double}]{L}{, }\item[{double}]{f}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+initialize the the heat source parameters 
+
+Scaling factor for heat source 
+\begin{DoxyParams}{Parameters}
+{\em t\+\_\+max} & \+: Maximum simulation time \\
+\hline
+{\em L} & \+: Length of the bar \\
+\hline
+{\em f} & \+: Scaling factor for heat source \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classheat_1_1_heatsource1_d_a986c6911cf24bc06f445145e9d758f9e}\index{heat::Heatsource1D@{heat::Heatsource1D}!F@{F}}
+\index{F@{F}!heat::Heatsource1D@{heat::Heatsource1D}}
+\doxysubsubsection{\texorpdfstring{F()}{F()}}
+{\footnotesize\ttfamily \label{classheat_1_1_heatsource1_d_a986c6911cf24bc06f445145e9d758f9e} 
+double heat\+::\+Heatsource1\+D\+::F (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{double}]{t}{}\end{DoxyParamCaption}) const}
+
+
+
+compute the heat source value at position x and time t 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \+: Position along the bar \\
+\hline
+{\em t} & \+: Current time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Heat source value F(x,t) 
+\end{DoxyReturn}
+Region 1
+
+Region 2
+
+Outside the defined regions
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+ENSIIE\+\_\+\+M1/\+PAP/\+Chaleur/src/Heatsource1\+D.\+h\item 
+D\+:/\+ENSIIE\+\_\+\+M1/\+PAP/\+Chaleur/src/Heatsource1\+D.\+cpp\end{DoxyCompactItemize}

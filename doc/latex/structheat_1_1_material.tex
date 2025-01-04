@@ -1,0 +1,118 @@
+\doxysection{heat\+::Material Struct Reference}
+\hypertarget{structheat_1_1_material}{}\label{structheat_1_1_material}\index{heat::Material@{heat::Material}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structheat_1_1_material_a3ccea4be3fbc9c84a11687ae6ade27f2}{Material}} (const char \texorpdfstring{$\ast$}{*}name, double \mbox{\hyperlink{structheat_1_1_material_a665eaaa4bd825324a28929d8f65a1b30}{conductivity}}, double \mbox{\hyperlink{structheat_1_1_material_a4fd14a02896f7547b945d036f4067d8e}{density}}, double \mbox{\hyperlink{structheat_1_1_material_ad36ddb8254243cfe8fe0ff380f348707}{specific\+Heat}})
+\begin{DoxyCompactList}\small\item\em New \doxylink{structheat_1_1_material}{Material} object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structheat_1_1_material_aebb33689989466b0669b460a26240fee}{get\+Thermal\+Diffusivity}} () const
+\begin{DoxyCompactList}\small\item\em Calculate and return the thermal diffusivity of the material. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structheat_1_1_material_aed59432efcbab4aeada85ee860c4761e}\label{structheat_1_1_material_aed59432efcbab4aeada85ee860c4761e} 
+const char \texorpdfstring{$\ast$}{*} {\bfseries name}
+\item 
+double \mbox{\hyperlink{structheat_1_1_material_a665eaaa4bd825324a28929d8f65a1b30}{conductivity}}
+\item 
+double \mbox{\hyperlink{structheat_1_1_material_a4fd14a02896f7547b945d036f4067d8e}{density}}
+\item 
+double \mbox{\hyperlink{structheat_1_1_material_ad36ddb8254243cfe8fe0ff380f348707}{specific\+Heat}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{structheat_1_1_material_afca78ddda2e9c295218764daba74c34e}{operator$<$$<$}} (std\+::ostream \&st, const \mbox{\hyperlink{structheat_1_1_material}{Material}} \&mat)
+\begin{DoxyCompactList}\small\item\em Overload the stream insertion operator to output the details of the material. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structheat_1_1_material_a3ccea4be3fbc9c84a11687ae6ade27f2}\index{heat::Material@{heat::Material}!Material@{Material}}
+\index{Material@{Material}!heat::Material@{heat::Material}}
+\doxysubsubsection{\texorpdfstring{Material()}{Material()}}
+{\footnotesize\ttfamily \label{structheat_1_1_material_a3ccea4be3fbc9c84a11687ae6ade27f2} 
+heat\+::\+Material\+::\+Material (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{double}]{conductivity}{, }\item[{double}]{density}{, }\item[{double}]{specific\+Heat}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+New \doxylink{structheat_1_1_material}{Material} object. 
+
+Heat capacity of the material (c) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \+: The name of the material \\
+\hline
+{\em conductivity} & \+: The thermal conductivity of the material (lambda) \\
+\hline
+{\em density} & \+: The density of the material (rho) \\
+\hline
+{\em specific\+Heat} & \+: The specific heat capacity of the material (c) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structheat_1_1_material_aebb33689989466b0669b460a26240fee}\index{heat::Material@{heat::Material}!getThermalDiffusivity@{getThermalDiffusivity}}
+\index{getThermalDiffusivity@{getThermalDiffusivity}!heat::Material@{heat::Material}}
+\doxysubsubsection{\texorpdfstring{getThermalDiffusivity()}{getThermalDiffusivity()}}
+{\footnotesize\ttfamily \label{structheat_1_1_material_aebb33689989466b0669b460a26240fee} 
+double heat\+::\+Material\+::get\+Thermal\+Diffusivity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculate and return the thermal diffusivity of the material. 
+
+\begin{DoxyReturn}{Returns}
+double The thermal diffusivity of the material 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{structheat_1_1_material_afca78ddda2e9c295218764daba74c34e}\index{heat::Material@{heat::Material}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!heat::Material@{heat::Material}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{structheat_1_1_material_afca78ddda2e9c295218764daba74c34e} 
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{st}{, }\item[{const \mbox{\hyperlink{structheat_1_1_material}{Material}} \&}]{mat}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overload the stream insertion operator to output the details of the material. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em st} & \+: Reference to the output stream object \\
+\hline
+{\em mat} & \+: Reference to the \doxylink{structheat_1_1_material}{Material} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& Reference to the output stream object 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structheat_1_1_material_a665eaaa4bd825324a28929d8f65a1b30}\index{heat::Material@{heat::Material}!conductivity@{conductivity}}
+\index{conductivity@{conductivity}!heat::Material@{heat::Material}}
+\doxysubsubsection{\texorpdfstring{conductivity}{conductivity}}
+{\footnotesize\ttfamily \label{structheat_1_1_material_a665eaaa4bd825324a28929d8f65a1b30} 
+double heat\+::\+Material\+::conductivity}
+
+The name of the material \Hypertarget{structheat_1_1_material_a4fd14a02896f7547b945d036f4067d8e}\index{heat::Material@{heat::Material}!density@{density}}
+\index{density@{density}!heat::Material@{heat::Material}}
+\doxysubsubsection{\texorpdfstring{density}{density}}
+{\footnotesize\ttfamily \label{structheat_1_1_material_a4fd14a02896f7547b945d036f4067d8e} 
+double heat\+::\+Material\+::density}
+
+Thermal conductivity of the material (lambda) \Hypertarget{structheat_1_1_material_ad36ddb8254243cfe8fe0ff380f348707}\index{heat::Material@{heat::Material}!specificHeat@{specificHeat}}
+\index{specificHeat@{specificHeat}!heat::Material@{heat::Material}}
+\doxysubsubsection{\texorpdfstring{specificHeat}{specificHeat}}
+{\footnotesize\ttfamily \label{structheat_1_1_material_ad36ddb8254243cfe8fe0ff380f348707} 
+double heat\+::\+Material\+::specific\+Heat}
+
+Density of the material (rho) 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+ENSIIE\+\_\+\+M1/\+PAP/\+Chaleur/src/Material.\+h\item 
+D\+:/\+ENSIIE\+\_\+\+M1/\+PAP/\+Chaleur/src/Material.\+cpp\end{DoxyCompactItemize}

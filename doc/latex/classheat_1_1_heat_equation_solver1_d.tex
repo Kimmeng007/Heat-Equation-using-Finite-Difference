@@ -1,0 +1,128 @@
+\doxysection{heat\+::Heat\+Equation\+Solver1D Class Reference}
+\hypertarget{classheat_1_1_heat_equation_solver1_d}{}\label{classheat_1_1_heat_equation_solver1_d}\index{heat::HeatEquationSolver1D@{heat::HeatEquationSolver1D}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classheat_1_1_heat_equation_solver1_d_a31bbfb35560b6dd6117da804dcb4669d}{Heat\+Equation\+Solver1D}} (const \mbox{\hyperlink{structheat_1_1_material}{Material}} \&material, const \mbox{\hyperlink{classheat_1_1_heatsource1_d}{Heatsource1D}} \&source, double L, double tmax, double u0, int N\+\_\+s, int N\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Constructor to initialize the \doxylink{classheat_1_1_heat_equation_solver1_d}{Heat\+Equation\+Solver1D} object. \end{DoxyCompactList}\item 
+\Hypertarget{classheat_1_1_heat_equation_solver1_d_a9eaa00e8ba7d63329b083609bdea57c1}\label{classheat_1_1_heat_equation_solver1_d_a9eaa00e8ba7d63329b083609bdea57c1} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Heat\+Equation\+Solver1D} ()
+\begin{DoxyCompactList}\small\item\em Destructor to deallocate dynamic memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classheat_1_1_heat_equation_solver1_d_a64787075874cf0b66eb4c23059d6c747}{solve}} ()
+\begin{DoxyCompactList}\small\item\em Solve the heat equation using finite difference methods. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classheat_1_1_heat_equation_solver1_d_a9aae396b4810401d42ba16f35d01a0e2}{print\+Temperature\+Matrix}} (std\+::ostream \&os=std\+::cout) const
+\begin{DoxyCompactList}\small\item\em Print the temperature matrix to the specified output stream. \end{DoxyCompactList}\item 
+const double \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classheat_1_1_heat_equation_solver1_d_a8f43e7302db5824dfb3a0f9537cf2439}{get\+Temperature\+At\+Time}} (int time\+Step) const
+\begin{DoxyCompactList}\small\item\em Gets the temperature profile at a specific time step. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classheat_1_1_heat_equation_solver1_d_a31bbfb35560b6dd6117da804dcb4669d}\index{heat::HeatEquationSolver1D@{heat::HeatEquationSolver1D}!HeatEquationSolver1D@{HeatEquationSolver1D}}
+\index{HeatEquationSolver1D@{HeatEquationSolver1D}!heat::HeatEquationSolver1D@{heat::HeatEquationSolver1D}}
+\doxysubsubsection{\texorpdfstring{HeatEquationSolver1D()}{HeatEquationSolver1D()}}
+{\footnotesize\ttfamily \label{classheat_1_1_heat_equation_solver1_d_a31bbfb35560b6dd6117da804dcb4669d} 
+heat\+::\+Heat\+Equation\+Solver1\+D\+::\+Heat\+Equation\+Solver1D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structheat_1_1_material}{Material}} \&}]{material}{, }\item[{const \mbox{\hyperlink{classheat_1_1_heatsource1_d}{Heatsource1D}} \&}]{source}{, }\item[{double}]{L}{, }\item[{double}]{tmax}{, }\item[{double}]{u0}{, }\item[{int}]{N\+\_\+s}{, }\item[{int}]{N\+\_\+t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor to initialize the \doxylink{classheat_1_1_heat_equation_solver1_d}{Heat\+Equation\+Solver1D} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & \doxylink{structheat_1_1_material}{Material} for which to solve the heat equation. \\
+\hline
+{\em source} & Heat source affecting the material. \\
+\hline
+{\em L} & Length of the domain. \\
+\hline
+{\em tmax} & Maximum simulation time. \\
+\hline
+{\em u0} & Initial temperature. \\
+\hline
+{\em N\+\_\+s} & Number of spatial divisions. \\
+\hline
+{\em N\+\_\+t} & Number of time steps. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classheat_1_1_heat_equation_solver1_d_a8f43e7302db5824dfb3a0f9537cf2439}\index{heat::HeatEquationSolver1D@{heat::HeatEquationSolver1D}!getTemperatureAtTime@{getTemperatureAtTime}}
+\index{getTemperatureAtTime@{getTemperatureAtTime}!heat::HeatEquationSolver1D@{heat::HeatEquationSolver1D}}
+\doxysubsubsection{\texorpdfstring{getTemperatureAtTime()}{getTemperatureAtTime()}}
+{\footnotesize\ttfamily \label{classheat_1_1_heat_equation_solver1_d_a8f43e7302db5824dfb3a0f9537cf2439} 
+const double \texorpdfstring{$\ast$}{*} heat\+::\+Heat\+Equation\+Solver1\+D\+::get\+Temperature\+At\+Time (\begin{DoxyParamCaption}\item[{int}]{time\+Step}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the temperature profile at a specific time step. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Step} & The time step index (0 to N\+\_\+t-\/1) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the temperature profile at the specified time step 
+\end{DoxyReturn}
+\Hypertarget{classheat_1_1_heat_equation_solver1_d_a9aae396b4810401d42ba16f35d01a0e2}\index{heat::HeatEquationSolver1D@{heat::HeatEquationSolver1D}!printTemperatureMatrix@{printTemperatureMatrix}}
+\index{printTemperatureMatrix@{printTemperatureMatrix}!heat::HeatEquationSolver1D@{heat::HeatEquationSolver1D}}
+\doxysubsubsection{\texorpdfstring{printTemperatureMatrix()}{printTemperatureMatrix()}}
+{\footnotesize\ttfamily \label{classheat_1_1_heat_equation_solver1_d_a9aae396b4810401d42ba16f35d01a0e2} 
+void heat\+::\+Heat\+Equation\+Solver1\+D\+::print\+Temperature\+Matrix (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{ = {\ttfamily std\+:\+:cout}}\end{DoxyParamCaption}) const}
+
+
+
+Print the temperature matrix to the specified output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Output stream (default\+: std\+::cout) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classheat_1_1_heat_equation_solver1_d_a64787075874cf0b66eb4c23059d6c747}\index{heat::HeatEquationSolver1D@{heat::HeatEquationSolver1D}!solve@{solve}}
+\index{solve@{solve}!heat::HeatEquationSolver1D@{heat::HeatEquationSolver1D}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily \label{classheat_1_1_heat_equation_solver1_d_a64787075874cf0b66eb4c23059d6c747} 
+void heat\+::\+Heat\+Equation\+Solver1\+D\+::solve (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Solve the heat equation using finite difference methods. 
+
+Initialize the temperature matrix
+
+Calculate the thermal diffusivity and the coefficient r
+
+Sub-\/diagonal
+
+Main diagonal
+
+Super-\/diagonal
+
+Right-\/hand side
+
+Initialize tridiagonal matrix coefficients
+
+Time-\/stepping loop
+
+Construct the right-\/hand side vector
+
+Apply boundary conditions to the right-\/hand side
+
+Neumann at x = 0
+
+Dirichlet at x = L
+
+Solve the tridiagonal system
+
+Update the temperature matrix for the next time step
+
+Apply boundary conditions to the updated row
+
+clean up dynamically allocated memory for tridiagonal coefficients
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+ENSIIE\+\_\+\+M1/\+PAP/\+Chaleur/src/Heat\+Equation\+Solver1\+D.\+h\item 
+D\+:/\+ENSIIE\+\_\+\+M1/\+PAP/\+Chaleur/src/Heat\+Equation\+Solver1\+D.\+cpp\end{DoxyCompactItemize}
