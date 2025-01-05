@@ -1,39 +1,44 @@
 #include "Result2D.h"
+#include "SDL.h"
 
 namespace heat {
 
-    void Result2D::runSimulation() {
-        // Create the heat source and solver
-        Heatsource2D heatSource(t_max_, L_, f_);
-        HeatEquationSolver2D solver(material_, heatSource, L_, t_max_, u0_, N_, M_);
+/**
+ * @brief Constructor for the Result2D class.
+ * @param solver Reference to the HeatEquationSolver2D instance.
+ * @param title Title of the visualization window.
+ * @param width Width of the visualization window.
+ * @param height Height of the visualization window.
+ */
+Result2D::Result2D(HeatEquationSolver2D& solver, const char* title, int width, int height)
+    : Visualization(title, width, height), solver(solver) {}
 
-        // Solve the 2D heat equation
-        solver.solve();
+/**
+ * @brief Visualizes the results of the heat equation simulation.
+ */
+void Result2D::visualize() {
+    const auto& grids = solver.getAllTemperatureGrids();
+    int numTimeSteps = grids.size();
+    int spatialDivisions = grids[0].size();
 
-        // Retrieve the full temperature matrix from the solver
-        std::vector<std::vector<std::vector<double>>> temperatureGrids = solver.getAllTemperatureGrids();
+    for (int t = 0; t < numTimeSteps; ++t) {
+        // Extract the 2D grid for the current timestep.
+        const auto& grid = grids[t];
+        std::vector<double> flattenedGrid;
+        double maxTemperature = 0.0;
 
-        // Initialize the Visualization2D object for rendering
-        Visualization2D visualizer("2D Heat Equation Visualization");
-
-        // Compute the maximum temperature for color scaling
-        double maxTemperature = u0_;
-        for (const auto& timeStep : temperatureGrids) {
-            for (const auto& row : timeStep) {
-                for (double temp : row) {
-                    if (temp > maxTemperature) {
-                        maxTemperature = temp;
-                    }
+        for (const auto& row : grid) {
+            for (double temp : row) {
+                flattenedGrid.push_back(temp);
+                if (temp > maxTemperature) {
+                    maxTemperature = temp;
                 }
             }
         }
 
-        // Render each grid in the temperature matrix
-        for (const auto& grid : temperatureGrids) {
-            visualizer.renderGrid2D(grid, N_, N_, maxTemperature);
-
-            // Add delay for visualization
-            SDL_Delay(100);
-        }
+        render2DTemperatureProfile(flattenedGrid.data(), spatialDivisions * spatialDivisions, maxTemperature);
+        SDL_Delay(100); // Delay for smooth visualization
     }
 }
+
+} // namespace heat

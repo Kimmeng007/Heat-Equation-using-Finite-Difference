@@ -1,25 +1,25 @@
 #include "Visualization2D.h"
+#include <iostream>
+#include <iomanip>
 
-Visualization2D::Visualization2D(const char* title, int width, int height)
-    : Visualization(title, width, height) {}
+namespace heat {
 
-void Visualization2D::renderGrid2D(const std::vector<std::vector<double>>& temperatureGrid, int rows, int cols, double maxTemperature) {
-    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-    SDL_RenderClear(renderer);
+    void Visualization2D::render(const std::vector<std::vector<double>>& grid) const {
+        std::cout << "2D Heat Equation Solution Animation"<< "\n";
 
-    int cellWidth = windowWidth / cols;
-    int cellHeight = windowHeight / rows;
+        // Determine the grid size
+        size_t rows = grid.size();
+        size_t cols = grid[0].size();
 
-    for (int i = 0; i < rows; ++i) {
-        for (int j = 0; j < cols; ++j) {
-            double temp = temperatureGrid[i][j];
-            SDL_Color color = getTemperatureColor(temp, maxTemperature);
-            SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
-
-            SDL_Rect cell = {j * cellWidth, i * cellHeight, cellWidth, cellHeight};
-            SDL_RenderFillRect(renderer, &cell);
+        // Render the grid as a simple ASCII visualization
+        for (size_t i = 0; i < rows; ++i) {
+            for (size_t j = 0; j < cols; ++j) {
+                // Scale temperature for visualization (e.g., normalize to [0, 9])
+                int scaledTemp = static_cast<int>(9 * (grid[i][j] / 100)); // Adjust scale as needed
+                std::cout << std::setw(2) << scaledTemp;
+            }
+            std::cout << "\n";
         }
     }
 
-    SDL_RenderPresent(renderer);
 }

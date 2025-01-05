@@ -24,7 +24,7 @@ namespace heat {
         }
 
         // Compute the maximum temperature for color scaling (using initial temperature as a placeholder)
-        double maxTemperature = u0_;  /**< Maximum temperature for color scaling in visualization */
+        double maxTemperature = 700;  /**< Maximum temperature for color scaling in visualization */
 
         // Render the temperature profiles at all time steps
         visualizer.renderMultiple2DTemperatureProfiles(temperatureProfiles, M_, N_, maxTemperature);

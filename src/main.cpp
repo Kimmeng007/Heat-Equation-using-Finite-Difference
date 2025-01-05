@@ -4,8 +4,7 @@
 #include "Result1D.h"
 // #include "Visualization.h"
 // #include <SDL2/SDL.h>
-#include "Result2D.h"
-#include "Visualization2D.h"
+// #include "Result2D.h"
 
 int SDL_main(int argc, char* argv[]){
     try{
@@ -30,12 +29,21 @@ int SDL_main(int argc, char* argv[]){
             std::cout << "Simulating for material: " << material.name << "\n";
 
             // Set up the simulation for the current material
-            heat::Result2D simulation(f, t_max, L, u0, N, M, material);
+            heat::Result1D simulation(f, t_max, L, u0, N, M, material);
             // heat::Result2D simulation(f, t_max, L, u0, N, M, material);
 
             // Run the simulation
             simulation.runSimulation();
         }
+
+        // heat::Heatsource2D heatSource(t_max, L, f);
+        // heat::HeatEquationSolver2D solver(materials[1], heatSource, L, t_max, u0, N, M);
+
+        // // Initialize the visualization window with a title and dimensions.
+        // heat::Result2D result2D(solver, "Heat Equation Visualization", 800, 600);
+
+        // // Visualize the results of the heat equation simulation.
+        // result2D.visualize();
 
         // // Create a static array to hold the temperature profiles for each time step
         // const double* temperatureProfiles[M];  /**< Holds temperature profiles at different time steps */
@@ -46,6 +54,17 @@ int SDL_main(int argc, char* argv[]){
         //     std::cout << "Timestep =  " << t << std::endl;
         //     std::cout << *temperatureProfiles[t] << std::endl;
         // }
+
+        // heat::Heatsource2D heatSource(t_max, L, f);
+        // heat::HeatEquationSolver2D solver(materials[1], heatSource, L, t_max, u0, N, M);
+
+        // // Solve the 2D heat equation
+        // solver.solve();
+
+        // // Retrieve the full temperature matrix from the solver
+        // std::vector<std::vector<std::vector<double>>> temperatureGrids = solver.getAllTemperatureGrids();
+
+        // std::cout << temperatureGrids << std::endl;
 
     } catch (const std::exception& e) {
         std::cerr << "Error: " << e.what() << std::endl;

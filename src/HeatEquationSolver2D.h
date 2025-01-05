@@ -1,10 +1,9 @@
 #ifndef HEAT_EQUATION_SOLVER_2D_H
 #define HEAT_EQUATION_SOLVER_2D_H
 
-#include <iostream>
-#include "material.h"
-#include "HeatSource2D.h"
 #include <vector>
+#include "Material.h"
+#include "Heatsource2D.h"
 
 /**
  * @brief Solves the two-dimensional heat equation for a given material and heat source.
@@ -14,76 +13,47 @@ namespace heat {
     private:
         Material material;      /**< Material properties */
         Heatsource2D source;    /**< Heat source affecting the material */
-        double L;               /**< Length of the domain */
+        double L;               /**< Length of the domain in both x and y */
         double tmax;            /**< Maximum simulation time */
         double u0;              /**< Initial temperature */
-        int N;                  /**< Number of spatial divisions in each dimension */
+        int N;                  /**< Number of spatial divisions in x and y */
         int M;                  /**< Number of time steps */
-        double dx;              /**< Spatial step size (x or y-direction), Note that, in this case dx = dy */
+        double dx;              /**< Spatial step size */
         double dt;              /**< Time step size */
 
-        double*** temperatureMatrix; /**< Dynamic 3D array for storing temperature values */
+        std::vector<std::vector<std::vector<double>>> temperatureGrids; /**< 3D array for temperature values */
 
         /**
-         * @brief Initializes the dynamic memory for the temperature matrix.
+         * @brief Applies Neumann boundary condition at the left boundary (x = 0).
          */
-        void initializeMatrix();
+        void applyNeumannBoundary(std::vector<std::vector<double>>& grid);
 
         /**
-         * @brief Deallocates the dynamic memory for the temperature matrix.
+         * @brief Applies Dirichlet boundary condition at the right boundary (x = L).
          */
-        void deallocateMatrix();
+        void applyDirichletBoundary(std::vector<std::vector<double>>& grid);
 
         /**
-         * @brief Applies Neumann boundary conditions at the edges of the domain.
+         * @brief Solves a tridiagonal system of equations using the Thomas algorithm.
          */
-        void applyNeumannBoundary(double** currentLayer);
-
-        /**
-         * @brief Applies Dirichlet boundary conditions at the edges of the domain.
-         */
-        void applyDirichletBoundary(double** currentLayer);
+        void solveTridiagonal(double* a, double* b, double* c, double* d, int size);
 
     public:
         /**
-         * @brief Constructor to initialize the HeatEquationSolver2D object.
-         *
-         * @param material Material for which to solve the heat equation.
-         * @param source Heat source affecting the material.
-         * @param L Length of the domain.
-         * @param tmax Maximum simulation time.
-         * @param u0 Initial temperature.
-         * @param N Number of spatial divisions in each dimension.
-         * @param M Number of time steps.
+         * @brief Constructor to initialize the solver with parameters.
          */
-        HeatEquationSolver2D(const Material& material, const Heatsource2D& source, double L, double tmax, double u0, int N, int M)
-            : material(material), source(source), L(L), tmax(tmax), u0(u0), N(N), M(M), dx(L / (N - 1)), dt(tmax / (M - 1)) {
-                initializeMatrix();
-        }
+        HeatEquationSolver2D(const Material& material, const Heatsource2D& source, double L, double tmax, double u0, int N, int M);
 
         /**
-         * @brief Destructor to deallocate dynamic memory
-         */
-        ~HeatEquationSolver2D() {
-            deallocateMatrix();
-        }
-
-        /**
-         * @brief Solve the heat equation using finite difference methods
+         * @brief Solve the 2D heat equation using finite difference methods.
          */
         void solve();
 
         /**
-         * @brief Print the temperature matrix at a specific time step
-         *
-         * @param timeStep The time step index (0 to M-1)
-         * @param os Output stream (default: std::cout)
+         * @brief Returns the entire temperature grid for visualization.
          */
-        void printTemperatureMatrixAtTime(int timeStep, std::ostream& os = std::cout) const;
-
-        std::vector<std::vector<std::vector<double>>> getAllTemperatureGrids() const;
+        const std::vector<std::vector<std::vector<double>>>& getAllTemperatureGrids() const;
     };
-
 }
 
-#endif // HEAT_EQUATION_SOLVER_2D_H
+#endif
