@@ -1,10 +1,10 @@
 #include <iostream>
 #include <vector>
 #include "Material.h"
-#include "Result1D.h"
+//#include "Result1D.h"
 // #include "Visualization.h"
-// #include <SDL2/SDL.h>
-// #include "Result2D.h"
+#include <SDL2/SDL.h>
+#include "Result2D.h"
 
 int SDL_main(int argc, char* argv[]){
     try{
@@ -24,17 +24,17 @@ int SDL_main(int argc, char* argv[]){
         int M = 100;        // Number of time steps
         double f = 1353.15;     // Heat source intensity factor in Kelvin
 
-        // Iterate through each material and solve the heat equation
-        for (const auto& material : materials) {
-            std::cout << "Simulating for material: " << material.name << "\n";
+        // // Iterate through each material and solve the heat equation
+        // for (const auto& material : materials) {
+        //     std::cout << "Simulating for material: " << material.name << "\n";
 
-            // Set up the simulation for the current material
-            heat::Result1D simulation(f, t_max, L, u0, N, M, material);
-            // heat::Result2D simulation(f, t_max, L, u0, N, M, material);
+        //     // Set up the simulation for the current material
+        //     heat::Result1D simulation(f, t_max, L, u0, N, M, material);
+        //     // heat::Result2D simulation(f, t_max, L, u0, N, M, material);
 
-            // Run the simulation
-            simulation.runSimulation();
-        }
+        //     // Run the simulation
+        //     simulation.runSimulation();
+        // }
 
         // heat::Heatsource2D heatSource(t_max, L, f);
         // heat::HeatEquationSolver2D solver(materials[1], heatSource, L, t_max, u0, N, M);
@@ -44,6 +44,12 @@ int SDL_main(int argc, char* argv[]){
 
         // // Visualize the results of the heat equation simulation.
         // result2D.visualize();
+
+        // Set up the simulation for the current material
+        heat::Result2D simulation(f, t_max, L, u0, N, M, materials[0]);
+
+        // Run the simulation
+        simulation.runSimulation();
 
         // // Create a static array to hold the temperature profiles for each time step
         // const double* temperatureProfiles[M];  /**< Holds temperature profiles at different time steps */
