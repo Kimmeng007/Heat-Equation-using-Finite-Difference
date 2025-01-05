@@ -1,0 +1,34 @@
+\doxysection{Result2\+D.\+h}
+\hypertarget{_result2_d_8h_source}{}\label{_result2_d_8h_source}\index{D:/ENSIIE\_M1/PAP/Chaleur/src/Result2D.h@{D:/ENSIIE\_M1/PAP/Chaleur/src/Result2D.h}}
+\mbox{\hyperlink{_result2_d_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ RESULT2D\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ RESULT2D\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_heat_equation_solver2_d_8h}{HeatEquationSolver2D.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_material_8h}{Material.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_visualization2_d_8h}{Visualization2D.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceheat}{heat}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classheat_1_1_result2_d_a7d64973ca0e81c641f91e0a2134826ad}{Result2D}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classheat_1_1_result2_d_abdc6dfd52cc4cff88227f425d7dd749f}{f\_}};}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classheat_1_1_result2_d_a7207c6b424b774f2c4447a3603b38d67}{t\_max\_}};}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classheat_1_1_result2_d_ae80a26678eccc93ed1472ab0eb89ce0f}{L\_}};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classheat_1_1_result2_d_a5ee49f0ba30ce962bd2f86a8401479df}{u0\_}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classheat_1_1_result2_d_a479b61dc5a4fb814098b23edfd42b078}{N\_}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classheat_1_1_result2_d_acc8e591d26a42cdde3f2ab2b7430ce19}{M\_}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structheat_1_1_material}{Material}}\ \mbox{\hyperlink{classheat_1_1_result2_d_a90d32d315665eb89273c21a0a75ee792}{material\_}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classheat_1_1_result2_d_a7d64973ca0e81c641f91e0a2134826ad}{Result2D}}(\textcolor{keywordtype}{double}\ f,\ \textcolor{keywordtype}{double}\ tmax,\ \textcolor{keywordtype}{double}\ L,\ \textcolor{keywordtype}{double}\ u0,\ \textcolor{keywordtype}{int}\ N,\ \textcolor{keywordtype}{int}\ M,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structheat_1_1_material}{Material}}\&\ material)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classheat_1_1_result2_d_abdc6dfd52cc4cff88227f425d7dd749f}{f\_}}(f),\ \mbox{\hyperlink{classheat_1_1_result2_d_a7207c6b424b774f2c4447a3603b38d67}{t\_max\_}}(tmax),\ \mbox{\hyperlink{classheat_1_1_result2_d_ae80a26678eccc93ed1472ab0eb89ce0f}{L\_}}(L),\ \mbox{\hyperlink{classheat_1_1_result2_d_a5ee49f0ba30ce962bd2f86a8401479df}{u0\_}}(u0),\ \mbox{\hyperlink{classheat_1_1_result2_d_a479b61dc5a4fb814098b23edfd42b078}{N\_}}(N),\ \mbox{\hyperlink{classheat_1_1_result2_d_acc8e591d26a42cdde3f2ab2b7430ce19}{M\_}}(M),\ \mbox{\hyperlink{classheat_1_1_result2_d_a90d32d315665eb89273c21a0a75ee792}{material\_}}(material)\ \{\}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classheat_1_1_result2_d_a40d7f24808594a565c9051bebc7d4896}{runSimulation}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \};}
+\DoxyCodeLine{00043\ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

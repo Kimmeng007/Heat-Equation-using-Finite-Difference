@@ -28,7 +28,7 @@ namespace heat{
          * @param t : Current time
          * @return Heat source value F(x,t)
          */
-        double F(double x, double t) const;
+        double F(double x) const;
     };
 
 }

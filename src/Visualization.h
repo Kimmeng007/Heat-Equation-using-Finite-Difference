@@ -10,7 +10,7 @@
  */
 class Visualization{
 
-private:
+protected:
     const char* windowTitle; /** Title of the SDL window */
     SDL_Window* window; /** Pointer to the SDL window */
     SDL_Renderer* renderer; /** Pointer to the SDL renderer */

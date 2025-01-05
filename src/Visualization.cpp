@@ -1,4 +1,5 @@
 #include "Visualization.h"
+#include <vector>
 
 // Initializes SDL and sets up the window and renderer
 void Visualization::initializeSDL() {
@@ -55,6 +56,7 @@ void Visualization::render2DTemperatureProfile(const double* temperature, int si
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
     SDL_RenderClear(renderer);
 
+    // Draw temperature profile lines
     for (int i = 0; i < size - 1; ++i) {
         SDL_Color color = getTemperatureColor(temperature[i], maxTemperature);
         SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);

@@ -78,7 +78,7 @@ namespace heat {
             /** Construct the right-hand side vector */
             for (int x = 1; x < N - 1; ++x) {
                 d[x] = temperatureMatrix[n][x] +
-                       dt * source.F(x * dx, (n + 1) * dt) / (material.density * material.specificHeat);
+                       dt * source.F(x * dx) / (material.density * material.specificHeat);
             }
 
             /** Apply boundary conditions to the right-hand side*/

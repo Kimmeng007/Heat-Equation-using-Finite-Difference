@@ -1,0 +1,129 @@
+\doxysection{Visualization2D Class Reference}
+\hypertarget{class_visualization2_d}{}\label{class_visualization2_d}\index{Visualization2D@{Visualization2D}}
+
+
+A class to handle the visualization of 2D temperature grids using SDL.  
+
+
+
+
+{\ttfamily \#include $<$Visualization2\+D.\+h$>$}
+
+
+
+Inheritance diagram for Visualization2D\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{class_visualization2_d__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Visualization2D\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_visualization2_d__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_visualization2_d_a316c6df0a804e1bfff3fcd01f129ece6}{Visualization2D}} (const char \texorpdfstring{$\ast$}{*}title, int width=800, int height=600)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_visualization2_d}{Visualization2D} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_visualization2_d_a7b33caf8b79d0f821c692f8e4a9c3289}{render\+Grid2D}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&temperature\+Grid, int rows, int cols, double max\+Temperature)
+\begin{DoxyCompactList}\small\item\em Renders a 2D grid temperature profile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_visualization}{Visualization}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_visualization_a28510ba1b513c91f0bfe28f188a09909}{Visualization}} (const char \texorpdfstring{$\ast$}{*}title, int width=800, int height=600)
+\begin{DoxyCompactList}\small\item\em a new \doxylink{class_visualization}{Visualization} object \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_visualization_a1b3dc8c07a781aaf8f4cbe95031e191c}{\texorpdfstring{$\sim$}{\string~}\+Visualization}} ()
+\begin{DoxyCompactList}\small\item\em cleans up SDL resources \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_visualization_a801b17ff29d28cc0f0bba2463d0df622}{start\+Event\+Loop}} ()
+\begin{DoxyCompactList}\small\item\em Starts the SDL event loop for handling rendering and events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_visualization_a9091948fb0cb33b2b32a554b1fbded11}{render2\+DTemperature\+Profile}} (const double \texorpdfstring{$\ast$}{*}temperature, int size, double max\+Temperature)
+\begin{DoxyCompactList}\small\item\em Renders a 2D temperature profile for a single time step. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_visualization_a28966e16b356d0b0beb0c633d93fe44f}{render\+Multiple2\+DTemperature\+Profiles}} (const double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}temperature\+Profiles, int num\+Time\+Steps, int spatial\+Divisions, double max\+Temperature)
+\begin{DoxyCompactList}\small\item\em Renders multiple 2D temperature profiles over time. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Color \mbox{\hyperlink{class_visualization_a192de649c24931ce9189ca667b8687ad}{get\+Temperature\+Color}} (double temperature, double max\+Temperature)
+\begin{DoxyCompactList}\small\item\em Calculates a color representation for a given temperature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_visualization}{Visualization}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_visualization_a332ab7d28afa22169fb57a1c2b489a4a}{initialize\+SDL}} ()
+\begin{DoxyCompactList}\small\item\em Initializes SDL and creates the window and renderer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_visualization_a9f636583bc52bd7b5180eff2751fbb70}{clean\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Cleans up SDL resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_visualization}{Visualization}}}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_visualization_a608e7f92941f63dc1a88ba9fe16b5922}{window\+Title}}
+\item 
+SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_visualization_acb283acadb8efe55a3149db6f548e898}{window}}
+\item 
+SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_visualization_a2bfa08e7b910e343caee66a504ed782b}{renderer}}
+\item 
+int \mbox{\hyperlink{class_visualization_afdb36bbe013b697fa6b114152843377d}{window\+Width}}
+\item 
+int \mbox{\hyperlink{class_visualization_a4f215d0df643df89da1788f42a4bd0fe}{window\+Height}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to handle the visualization of 2D temperature grids using SDL. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_visualization2_d_a316c6df0a804e1bfff3fcd01f129ece6}\index{Visualization2D@{Visualization2D}!Visualization2D@{Visualization2D}}
+\index{Visualization2D@{Visualization2D}!Visualization2D@{Visualization2D}}
+\doxysubsubsection{\texorpdfstring{Visualization2D()}{Visualization2D()}}
+{\footnotesize\ttfamily \label{class_visualization2_d_a316c6df0a804e1bfff3fcd01f129ece6} 
+Visualization2\+D\+::\+Visualization2D (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{title}{, }\item[{int}]{width}{ = {\ttfamily 800}, }\item[{int}]{height}{ = {\ttfamily 600}}\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_visualization2_d}{Visualization2D} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & The title of the window \\
+\hline
+{\em width} & The width of the window (default 800) \\
+\hline
+{\em height} & The height of the window (default 600) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_visualization2_d_a7b33caf8b79d0f821c692f8e4a9c3289}\index{Visualization2D@{Visualization2D}!renderGrid2D@{renderGrid2D}}
+\index{renderGrid2D@{renderGrid2D}!Visualization2D@{Visualization2D}}
+\doxysubsubsection{\texorpdfstring{renderGrid2D()}{renderGrid2D()}}
+{\footnotesize\ttfamily \label{class_visualization2_d_a7b33caf8b79d0f821c692f8e4a9c3289} 
+void Visualization2\+D\+::render\+Grid2D (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{temperature\+Grid}{, }\item[{int}]{rows}{, }\item[{int}]{cols}{, }\item[{double}]{max\+Temperature}{}\end{DoxyParamCaption})}
+
+
+
+Renders a 2D grid temperature profile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temperature\+Grid} & 2D array representing the temperature grid \\
+\hline
+{\em rows} & Number of rows in the grid \\
+\hline
+{\em cols} & Number of columns in the grid \\
+\hline
+{\em max\+Temperature} & Maximum temperature for color scaling \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+ENSIIE\+\_\+\+M1/\+PAP/\+Chaleur/src/\mbox{\hyperlink{_visualization2_d_8h}{Visualization2\+D.\+h}}\item 
+D\+:/\+ENSIIE\+\_\+\+M1/\+PAP/\+Chaleur/src/\mbox{\hyperlink{_visualization2_d_8cpp}{Visualization2\+D.\+cpp}}\end{DoxyCompactItemize}

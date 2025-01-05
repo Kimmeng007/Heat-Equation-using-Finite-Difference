@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['solve_0',['solve',['../classheat_1_1_heat_equation_solver1_d.html#a64787075874cf0b66eb4c23059d6c747',1,'heat::HeatEquationSolver1D']]],
-  ['specificheat_1',['specificHeat',['../structheat_1_1_material.html#ad36ddb8254243cfe8fe0ff380f348707',1,'heat::Material']]],
-  ['starteventloop_2',['startEventLoop',['../class_visualization.html#a801b17ff29d28cc0f0bba2463d0df622',1,'Visualization']]]
+  ['operator_3c_3c_0',['operator&lt;&lt;',['../structheat_1_1_material.html#afca78ddda2e9c295218764daba74c34e',1,'heat::Material::operator&lt;&lt;()'],['../namespaceheat.html#ad167fdbe887e8b8a99bcec1d58acbb54',1,'heat::operator&lt;&lt;()']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['_7eheatequationsolver1d_0',['~HeatEquationSolver1D',['../classheat_1_1_heat_equation_solver1_d.html#a9eaa00e8ba7d63329b083609bdea57c1',1,'heat::HeatEquationSolver1D']]],
-  ['_7evisualization_1',['~Visualization',['../class_visualization.html#a1b3dc8c07a781aaf8f4cbe95031e191c',1,'Visualization']]]
+  ['printtemperaturematrix_0',['printTemperatureMatrix',['../classheat_1_1_heat_equation_solver1_d.html#a9aae396b4810401d42ba16f35d01a0e2',1,'heat::HeatEquationSolver1D']]],
+  ['printtemperaturematrixattime_1',['printTemperatureMatrixAtTime',['../classheat_1_1_heat_equation_solver2_d.html#a2de8b2ec14aebf18162a75f441687262',1,'heat::HeatEquationSolver2D']]]
 ];

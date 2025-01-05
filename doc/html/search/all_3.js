@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['gettemperatureattime_0',['getTemperatureAtTime',['../classheat_1_1_heat_equation_solver1_d.html#a8f43e7302db5824dfb3a0f9537cf2439',1,'heat::HeatEquationSolver1D']]],
-  ['gettemperaturecolor_1',['getTemperatureColor',['../class_visualization.html#a192de649c24931ce9189ca667b8687ad',1,'Visualization']]],
-  ['getthermaldiffusivity_2',['getThermalDiffusivity',['../structheat_1_1_material.html#aebb33689989466b0669b460a26240fee',1,'heat::Material']]],
-  ['glass_3',['glass',['../namespaceheat.html#a6b477618a0a4ed89514d2dae13b625d7',1,'heat']]]
+  ['f_0',['F',['../classheat_1_1_heatsource1_d.html#aadd94a19d583d62c0060c9d90906dfe3',1,'heat::Heatsource1D::F()'],['../classheat_1_1_heatsource2_d.html#a6cbbc5fc5a9d1eb92097cc7045e689e7',1,'heat::Heatsource2D::F()']]],
+  ['f_5f_1',['f_',['../classheat_1_1_heatsource1_d.html#a42602f81e11408c3e5a6cbda712e7b51',1,'heat::Heatsource1D::f_'],['../classheat_1_1_heatsource2_d.html#a169e7b85c53fc1adc7f73271cc1e717f',1,'heat::Heatsource2D::f_'],['../classheat_1_1_result1_d.html#a6300c972fc0a08e533e0b40ab9651914',1,'heat::Result1D::f_'],['../classheat_1_1_result2_d.html#abdc6dfd52cc4cff88227f425d7dd749f',1,'heat::Result2D::f_']]]
 ];

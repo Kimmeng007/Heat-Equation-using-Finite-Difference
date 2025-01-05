@@ -10,11 +10,17 @@ Solves the one-\/dimensional heat equation for a given material and heat source.
 \item 
 class \mbox{\hyperlink{classheat_1_1_heat_equation_solver1_d}{Heat\+Equation\+Solver1D}}
 \item 
+class \mbox{\hyperlink{classheat_1_1_heat_equation_solver2_d}{Heat\+Equation\+Solver2D}}
+\item 
 class \mbox{\hyperlink{classheat_1_1_heatsource1_d}{Heatsource1D}}
+\item 
+class \mbox{\hyperlink{classheat_1_1_heatsource2_d}{Heatsource2D}}
 \item 
 struct \mbox{\hyperlink{structheat_1_1_material}{Material}}
 \item 
 class \mbox{\hyperlink{classheat_1_1_result1_d}{Result1D}}
+\item 
+class \mbox{\hyperlink{classheat_1_1_result2_d}{Result2D}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -24,8 +30,7 @@ std\+::ostream \& \mbox{\hyperlink{namespaceheat_ad167fdbe887e8b8a99bcec1d58acbb
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{namespaceheat_aedd14aa47340c4f2945b3c4a0b02c6bf}\label{namespaceheat_aedd14aa47340c4f2945b3c4a0b02c6bf} 
-const \mbox{\hyperlink{structheat_1_1_material}{Material}} {\bfseries copper} ("{}Copper"{}, 389, 8940, 380)
+const \mbox{\hyperlink{structheat_1_1_material}{Material}} \mbox{\hyperlink{namespaceheat_aedd14aa47340c4f2945b3c4a0b02c6bf}{copper}} ("{}Copper"{}, 389, 8940, 380)
 \item 
 const \mbox{\hyperlink{structheat_1_1_material}{Material}} \mbox{\hyperlink{namespaceheat_adc96ab3fd5bba7e3b146dcf36e72d524}{iron}} ("{}Iron"{}, 80.\+2, 7874, 440)
 \item 
@@ -38,11 +43,17 @@ const \mbox{\hyperlink{structheat_1_1_material}{Material}} \mbox{\hyperlink{name
 \doxysubsection{Detailed Description}
 Solves the one-\/dimensional heat equation for a given material and heat source. 
 
+A class to solve and visualize the 2D heat equation for a material.
+
 A class to solve and visualize the 1D heat equation for a material.
 
 Represents the physical properties of a material related to heat transfer.
 
+Class representing the heat source F(x, y, t)
+
 class representing the heat source F(x,t)
+
+Solves the two-\/dimensional heat equation for a given material and heat source.
 
 This struct models the thermal properties of a material, including its name, thermal conductivity, density, and specific heat capacity. These properties are crucial in solving heat transfer problems. 
 
@@ -66,6 +77,12 @@ std\+::ostream\& Reference to the output stream object
 
 
 \doxysubsection{Variable Documentation}
+\Hypertarget{namespaceheat_aedd14aa47340c4f2945b3c4a0b02c6bf}\index{heat@{heat}!copper@{copper}}
+\index{copper@{copper}!heat@{heat}}
+\doxysubsubsection{\texorpdfstring{copper}{copper}}
+{\footnotesize\ttfamily \label{namespaceheat_aedd14aa47340c4f2945b3c4a0b02c6bf} 
+const \mbox{\hyperlink{structheat_1_1_material}{Material}} heat\+::copper (\begin{DoxyParamCaption}\item[{"{}Copper"{}}]{}{, }\item[{389}]{}{, }\item[{8940}]{}{, }\item[{380}]{}{}\end{DoxyParamCaption})}
+
 \Hypertarget{namespaceheat_a6b477618a0a4ed89514d2dae13b625d7}\index{heat@{heat}!glass@{glass}}
 \index{glass@{glass}!heat@{heat}}
 \doxysubsubsection{\texorpdfstring{glass}{glass}}

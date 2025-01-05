@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['visualization_0',['Visualization',['../class_visualization.html',1,'Visualization'],['../class_visualization.html#a28510ba1b513c91f0bfe28f188a09909',1,'Visualization::Visualization()']]]
+  ['polystyrene_0',['polystyrene',['../namespaceheat.html#a3d8e8bf431826a5d5b0ac7a830f9e5ac',1,'heat']]],
+  ['printtemperaturematrix_1',['printTemperatureMatrix',['../classheat_1_1_heat_equation_solver1_d.html#a9aae396b4810401d42ba16f35d01a0e2',1,'heat::HeatEquationSolver1D']]],
+  ['printtemperaturematrixattime_2',['printTemperatureMatrixAtTime',['../classheat_1_1_heat_equation_solver2_d.html#a2de8b2ec14aebf18162a75f441687262',1,'heat::HeatEquationSolver2D']]]
 ];

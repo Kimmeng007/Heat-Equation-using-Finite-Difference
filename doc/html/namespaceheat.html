@@ -117,11 +117,17 @@ $(function(){initNavTree('namespaceheat.html',''); initResizable(true); });
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classheat_1_1_heat_equation_solver1_d.html">HeatEquationSolver1D</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classheat_1_1_heat_equation_solver2_d.html">HeatEquationSolver2D</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classheat_1_1_heatsource1_d.html">Heatsource1D</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classheat_1_1_heatsource2_d.html">Heatsource2D</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structheat_1_1_material.html">Material</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classheat_1_1_result1_d.html">Result1D</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classheat_1_1_result2_d.html">Result2D</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -131,8 +137,7 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aedd14aa47340c4f2945b3c4a0b02c6bf" id="r_aedd14aa47340c4f2945b3c4a0b02c6bf"><td class="memItemLeft" align="right" valign="top"><a id="aedd14aa47340c4f2945b3c4a0b02c6bf" name="aedd14aa47340c4f2945b3c4a0b02c6bf"></a>
-const <a class="el" href="structheat_1_1_material.html">Material</a>&#160;</td><td class="memItemRight" valign="bottom"><b>copper</b> (&quot;Copper&quot;, 389, 8940, 380)</td></tr>
+<tr class="memitem:aedd14aa47340c4f2945b3c4a0b02c6bf" id="r_aedd14aa47340c4f2945b3c4a0b02c6bf"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structheat_1_1_material.html">Material</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedd14aa47340c4f2945b3c4a0b02c6bf">copper</a> (&quot;Copper&quot;, 389, 8940, 380)</td></tr>
 <tr class="separator:aedd14aa47340c4f2945b3c4a0b02c6bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc96ab3fd5bba7e3b146dcf36e72d524" id="r_adc96ab3fd5bba7e3b146dcf36e72d524"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structheat_1_1_material.html">Material</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc96ab3fd5bba7e3b146dcf36e72d524">iron</a> (&quot;Iron&quot;, 80.2, 7874, 440)</td></tr>
 <tr class="separator:adc96ab3fd5bba7e3b146dcf36e72d524"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,9 +148,12 @@ const <a class="el" href="structheat_1_1_material.html">Material</a>&#160;</td><
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Solves the one-dimensional heat equation for a given material and heat source. </p>
+<p>A class to solve and visualize the 2D heat equation for a material.</p>
 <p>A class to solve and visualize the 1D heat equation for a material.</p>
 <p>Represents the physical properties of a material related to heat transfer.</p>
+<p>Class representing the heat source F(x, y, t)</p>
 <p>class representing the heat source F(x,t)</p>
+<p>Solves the two-dimensional heat equation for a given material and heat source.</p>
 <p>This struct models the thermal properties of a material, including its name, thermal conductivity, density, and specific heat capacity. These properties are crucial in solving heat transfer problems. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="ad167fdbe887e8b8a99bcec1d58acbb54" name="ad167fdbe887e8b8a99bcec1d58acbb54"></a>
@@ -178,6 +186,37 @@ const <a class="el" href="structheat_1_1_material.html">Material</a>&#160;</td><
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="aedd14aa47340c4f2945b3c4a0b02c6bf" name="aedd14aa47340c4f2945b3c4a0b02c6bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedd14aa47340c4f2945b3c4a0b02c6bf">&#9670;&#160;</a></span>copper</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structheat_1_1_material.html">Material</a> heat::copper </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Copper&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">389</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">8940</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">380</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6b477618a0a4ed89514d2dae13b625d7" name="a6b477618a0a4ed89514d2dae13b625d7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6b477618a0a4ed89514d2dae13b625d7">&#9670;&#160;</a></span>glass</h2>
 

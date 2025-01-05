@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_visualization.html" title="A class to handle the visualization of temperature profiles using SDL." alt="" coords="5,5,101,32"/>
+<area shape="rect" id="Node000001" href="$class_visualization2_d.html" title="A class to handle the visualization of 2D temperature grids using SDL." alt="" coords="149,5,261,32"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="116,16,149,16,149,21,116,21"/>
+</map>

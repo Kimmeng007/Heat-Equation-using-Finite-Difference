@@ -1,0 +1,106 @@
+\doxysection{heat\+::Heatsource2D Class Reference}
+\hypertarget{classheat_1_1_heatsource2_d}{}\label{classheat_1_1_heatsource2_d}\index{heat::Heatsource2D@{heat::Heatsource2D}}
+
+
+{\ttfamily \#include $<$Heatsource2\+D.\+h$>$}
+
+
+
+Collaboration diagram for heat\+::Heatsource2D\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classheat_1_1_heatsource2_d__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classheat_1_1_heatsource2_d_a38f1eae96c4e85cde986c8d69801a560}{Heatsource2D}} (double t\+\_\+max, double L, double f)
+\begin{DoxyCompactList}\small\item\em Initialize the heat source parameters. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classheat_1_1_heatsource2_d_a6cbbc5fc5a9d1eb92097cc7045e689e7}{F}} (double x, double y) const
+\begin{DoxyCompactList}\small\item\em Compute the heat source value at position (x, y) and time t. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classheat_1_1_heatsource2_d_ac3730c96c582166a1639eed45c84982d}{t\+\_\+max\+\_\+}}
+\item 
+double \mbox{\hyperlink{classheat_1_1_heatsource2_d_aa29201de6ea0c82e633b1f2f9e81c3e1}{L\+\_\+}}
+\item 
+double \mbox{\hyperlink{classheat_1_1_heatsource2_d_a169e7b85c53fc1adc7f73271cc1e717f}{f\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classheat_1_1_heatsource2_d_a38f1eae96c4e85cde986c8d69801a560}\index{heat::Heatsource2D@{heat::Heatsource2D}!Heatsource2D@{Heatsource2D}}
+\index{Heatsource2D@{Heatsource2D}!heat::Heatsource2D@{heat::Heatsource2D}}
+\doxysubsubsection{\texorpdfstring{Heatsource2D()}{Heatsource2D()}}
+{\footnotesize\ttfamily \label{classheat_1_1_heatsource2_d_a38f1eae96c4e85cde986c8d69801a560} 
+heat\+::\+Heatsource2\+D\+::\+Heatsource2D (\begin{DoxyParamCaption}\item[{double}]{t\+\_\+max}{, }\item[{double}]{L}{, }\item[{double}]{f}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize the heat source parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+\_\+max} & Maximum simulation time \\
+\hline
+{\em L} & Length of the domain \\
+\hline
+{\em f} & Scaling factor for heat source \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classheat_1_1_heatsource2_d_a6cbbc5fc5a9d1eb92097cc7045e689e7}\index{heat::Heatsource2D@{heat::Heatsource2D}!F@{F}}
+\index{F@{F}!heat::Heatsource2D@{heat::Heatsource2D}}
+\doxysubsubsection{\texorpdfstring{F()}{F()}}
+{\footnotesize\ttfamily \label{classheat_1_1_heatsource2_d_a6cbbc5fc5a9d1eb92097cc7045e689e7} 
+double heat\+::\+Heatsource2\+D\+::F (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{double}]{y}{}\end{DoxyParamCaption}) const}
+
+
+
+Compute the heat source value at position (x, y) and time t. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Position along the x-\/axis \\
+\hline
+{\em y} & Position along the y-\/axis \\
+\hline
+{\em t} & Current time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Heat source value F(x, y, t) 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classheat_1_1_heatsource2_d_a169e7b85c53fc1adc7f73271cc1e717f}\index{heat::Heatsource2D@{heat::Heatsource2D}!f\_@{f\_}}
+\index{f\_@{f\_}!heat::Heatsource2D@{heat::Heatsource2D}}
+\doxysubsubsection{\texorpdfstring{f\_}{f\_}}
+{\footnotesize\ttfamily \label{classheat_1_1_heatsource2_d_a169e7b85c53fc1adc7f73271cc1e717f} 
+double heat\+::\+Heatsource2\+D\+::f\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Scaling factor for heat source \Hypertarget{classheat_1_1_heatsource2_d_aa29201de6ea0c82e633b1f2f9e81c3e1}\index{heat::Heatsource2D@{heat::Heatsource2D}!L\_@{L\_}}
+\index{L\_@{L\_}!heat::Heatsource2D@{heat::Heatsource2D}}
+\doxysubsubsection{\texorpdfstring{L\_}{L\_}}
+{\footnotesize\ttfamily \label{classheat_1_1_heatsource2_d_aa29201de6ea0c82e633b1f2f9e81c3e1} 
+double heat\+::\+Heatsource2\+D\+::\+L\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Length of the domain \Hypertarget{classheat_1_1_heatsource2_d_ac3730c96c582166a1639eed45c84982d}\index{heat::Heatsource2D@{heat::Heatsource2D}!t\_max\_@{t\_max\_}}
+\index{t\_max\_@{t\_max\_}!heat::Heatsource2D@{heat::Heatsource2D}}
+\doxysubsubsection{\texorpdfstring{t\_max\_}{t\_max\_}}
+{\footnotesize\ttfamily \label{classheat_1_1_heatsource2_d_ac3730c96c582166a1639eed45c84982d} 
+double heat\+::\+Heatsource2\+D\+::t\+\_\+max\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Maximum time for simulation 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+ENSIIE\+\_\+\+M1/\+PAP/\+Chaleur/src/\mbox{\hyperlink{_heatsource2_d_8h}{Heatsource2\+D.\+h}}\item 
+D\+:/\+ENSIIE\+\_\+\+M1/\+PAP/\+Chaleur/src/\mbox{\hyperlink{_heatsource2_d_8cpp}{Heatsource2\+D.\+cpp}}\end{DoxyCompactItemize}

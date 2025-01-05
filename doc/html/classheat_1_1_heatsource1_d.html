@@ -104,19 +104,41 @@ $(function(){initNavTree('classheat_1_1_heatsource1_d.html',''); initResizable(t
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classheat_1_1_heatsource1_d-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">heat::Heatsource1D Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_heatsource1_d_8h_source.html">Heatsource1D.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for heat::Heatsource1D:</div>
+<div class="dyncontent">
+<div class="center"><img src="classheat_1_1_heatsource1_d__coll__graph.png" border="0" usemap="#aheat_1_1_heatsource1_d_coll__map" alt="Collaboration graph"/></div>
+<map name="aheat_1_1_heatsource1_d_coll__map" id="aheat_1_1_heatsource1_d_coll__map">
+<area shape="rect" title=" " alt="" coords="5,171,133,261"/>
+<area shape="rect" title=" " alt="" coords="45,5,94,75"/>
+<area shape="poly" title=" " alt="" coords="72,74,72,154,66,154,66,74"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a58ccc61695e3646735310e99837b8bed" id="r_a58ccc61695e3646735310e99837b8bed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58ccc61695e3646735310e99837b8bed">Heatsource1D</a> (double t_max, double L, double f)</td></tr>
 <tr class="memdesc:a58ccc61695e3646735310e99837b8bed"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize the the heat source parameters  <br /></td></tr>
 <tr class="separator:a58ccc61695e3646735310e99837b8bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a986c6911cf24bc06f445145e9d758f9e" id="r_a986c6911cf24bc06f445145e9d758f9e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a986c6911cf24bc06f445145e9d758f9e">F</a> (double x, double t) const</td></tr>
-<tr class="memdesc:a986c6911cf24bc06f445145e9d758f9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the heat source value at position x and time t  <br /></td></tr>
-<tr class="separator:a986c6911cf24bc06f445145e9d758f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadd94a19d583d62c0060c9d90906dfe3" id="r_aadd94a19d583d62c0060c9d90906dfe3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadd94a19d583d62c0060c9d90906dfe3">F</a> (double x) const</td></tr>
+<tr class="memdesc:aadd94a19d583d62c0060c9d90906dfe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute the heat source value at position x and time t  <br /></td></tr>
+<tr class="separator:aadd94a19d583d62c0060c9d90906dfe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a590eeb94ad80c94a0fc42cec96ff26dd" id="r_a590eeb94ad80c94a0fc42cec96ff26dd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a590eeb94ad80c94a0fc42cec96ff26dd">t_max_</a></td></tr>
+<tr class="separator:a590eeb94ad80c94a0fc42cec96ff26dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94e58b95f2e87cb341d2fac10330e357" id="r_a94e58b95f2e87cb341d2fac10330e357"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94e58b95f2e87cb341d2fac10330e357">L_</a></td></tr>
+<tr class="separator:a94e58b95f2e87cb341d2fac10330e357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42602f81e11408c3e5a6cbda712e7b51" id="r_a42602f81e11408c3e5a6cbda712e7b51"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42602f81e11408c3e5a6cbda712e7b51">f_</a></td></tr>
+<tr class="separator:a42602f81e11408c3e5a6cbda712e7b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a58ccc61695e3646735310e99837b8bed" name="a58ccc61695e3646735310e99837b8bed"></a>
@@ -164,8 +186,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a986c6911cf24bc06f445145e9d758f9e" name="a986c6911cf24bc06f445145e9d758f9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a986c6911cf24bc06f445145e9d758f9e">&#9670;&#160;</a></span>F()</h2>
+<a id="aadd94a19d583d62c0060c9d90906dfe3" name="aadd94a19d583d62c0060c9d90906dfe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadd94a19d583d62c0060c9d90906dfe3">&#9670;&#160;</a></span>F()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,12 +195,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">double heat::Heatsource1D::F </td>
           <td>(</td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;) const</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -194,13 +212,81 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Heat source value F(x,t) </dd></dl>
 <p>Region 1</p>
 <p>Region 2</p>
-<p>Outside the defined regions</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a42602f81e11408c3e5a6cbda712e7b51" name="a42602f81e11408c3e5a6cbda712e7b51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42602f81e11408c3e5a6cbda712e7b51">&#9670;&#160;</a></span>f_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double heat::Heatsource1D::f_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Length of the bar </p>
+
+</div>
+</div>
+<a id="a94e58b95f2e87cb341d2fac10330e357" name="a94e58b95f2e87cb341d2fac10330e357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94e58b95f2e87cb341d2fac10330e357">&#9670;&#160;</a></span>L_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double heat::Heatsource1D::L_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum time for simulation </p>
+
+</div>
+</div>
+<a id="a590eeb94ad80c94a0fc42cec96ff26dd" name="a590eeb94ad80c94a0fc42cec96ff26dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a590eeb94ad80c94a0fc42cec96ff26dd">&#9670;&#160;</a></span>t_max_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double heat::Heatsource1D::t_max_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>D:/ENSIIE_M1/PAP/Chaleur/src/<a class="el" href="_heatsource1_d_8h_source.html">Heatsource1D.h</a></li>
-<li>D:/ENSIIE_M1/PAP/Chaleur/src/<b>Heatsource1D.cpp</b></li>
+<li>D:/ENSIIE_M1/PAP/Chaleur/src/<a class="el" href="_heatsource1_d_8cpp.html">Heatsource1D.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
