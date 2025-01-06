@@ -26,7 +26,7 @@ namespace heat{
          * @brief compute the heat source value at position x and time t
          * @param x : Position along the bar
          * @param t : Current time
-         * @return Heat source value F(x,t)
+         * @return Heat source value F(x)
          */
         double F(double x) const;
     };

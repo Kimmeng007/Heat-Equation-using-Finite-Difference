@@ -11,7 +11,7 @@ namespace heat{
      */
     class Visualization{
 
-    protected:
+    private:
         const char* windowTitle; /** Title of the SDL window */
         SDL_Window* window; /** Pointer to the SDL window */
         SDL_Renderer* renderer; /** Pointer to the SDL renderer */
@@ -36,7 +36,7 @@ namespace heat{
          * @param width The width of the window (default 800)
          * @param height The height of the window (default 600)
          */
-        Visualization(const char* title, int width = 800, int height = 600);
+        Visualization(const char* title, int width = 1003, int height = 600);
 
         /**
          * @brief cleans up SDL resources
@@ -56,6 +56,8 @@ namespace heat{
          * @param maxTemperature : The maximum temperature value for color scaling
          */
         void render2DTemperatureProfile(const double* temperature, int size, double maxTemperature);
+
+        void render2DTemperatureProfile(const double* temperature, int rows, int cols, double maxTemperature);
 
         /**
          * @brief Renders multiple 2D temperature profiles over time

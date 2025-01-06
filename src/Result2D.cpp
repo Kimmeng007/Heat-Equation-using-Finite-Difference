@@ -1,26 +1,24 @@
 #include "Result2D.h"
+#include <iostream>
+#include <vector>
 
 namespace heat {
 
     void Result2D::runSimulation() {
-        // Create the heat source and solver
-        Heatsource2D heatSource(t_max_, L_, f_);
-        HeatEquationSolver2D solver(material_, heatSource, L_, t_max_, u0_, N_, M_);
 
-        // Solve the 2D heat equation
-        solver.solve();
+        Heatsource2D heatSource(t_max_, L_, f_);  /**< Initialize the heat source with the appropriate parameters */
 
-        // Retrieve the full temperature grids
-        auto temperatureGrids = solver.getAllTemperatureGrids();
+        HeatEquationSolver2D solver_(material_, heatSource, L_, t_max_, u0_, N_, M_); /**< Initialize the HeatEquationSolver1D with the provided parameters */
 
-        // Initialize the Visualization2D object
-        Visualization2D visualizer("2D Heat Equation Simulation");
+        solver_.solve(); /**< Solve the heat equation using the finite difference method */
 
-        // Loop through time steps and visualize
-        for (size_t t = 0; t < temperatureGrids.size(); ++t) {
-            std::cout << "Visualizing time step " << t << "...\n";
-            visualizer.render(temperatureGrids[t]);
-        }
+        Visualization2D visualizer; /**< Initialize the Visualization object for rendering the results */
+
+        const auto& results = solver_.getAllTemperatureGrids(); /**< Store all Temperatuer Grid */
+
+        visualizer.showAllFrames(results, M_); /**< Visualize all frames */
+        
     }
+
 
 }

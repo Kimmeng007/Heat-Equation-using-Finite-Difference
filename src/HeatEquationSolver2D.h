@@ -53,6 +53,7 @@ namespace heat {
          * @brief Returns the entire temperature grid for visualization.
          */
         const std::vector<std::vector<std::vector<double>>>& getAllTemperatureGrids() const;
+
     };
 }
 

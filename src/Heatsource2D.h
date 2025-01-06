@@ -27,7 +27,7 @@ namespace heat {
          * @param x Position along the x-axis
          * @param y Position along the y-axis
          * @param t Current time
-         * @return Heat source value F(x, y, t)
+         * @return Heat source value F(x, y)
          */
         double F(double x, double y) const;
     };

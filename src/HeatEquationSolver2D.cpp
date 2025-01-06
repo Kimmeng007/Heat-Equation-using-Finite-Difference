@@ -9,13 +9,13 @@ namespace heat {
 
     void HeatEquationSolver2D::applyNeumannBoundary(std::vector<std::vector<double>>& grid) {
         for (int y = 0; y < N; ++y) {
-            grid[0][y] = grid[1][y];  // Neumann condition: ∂u/∂x = 0
+            grid[0][y] = grid[1][y];  
         }
     }
 
     void HeatEquationSolver2D::applyDirichletBoundary(std::vector<std::vector<double>>& grid) {
         for (int y = 0; y < N; ++y) {
-            grid[N - 1][y] = u0;  // Dirichlet condition: u = u0
+            grid[N - 1][y] = u0; 
         }
     }
 
@@ -75,4 +75,5 @@ namespace heat {
     const std::vector<std::vector<std::vector<double>>>& HeatEquationSolver2D::getAllTemperatureGrids() const {
         return temperatureGrids;
     }
+
 }

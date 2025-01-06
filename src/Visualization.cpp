@@ -80,6 +80,27 @@ namespace heat{
         }
     }
 
+    void Visualization::render2DTemperatureProfile(const double* temperature, int rows, int cols, double maxTemperature) {
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+        SDL_RenderClear(renderer);
+
+        int cellWidth = windowWidth / cols;
+        int cellHeight = windowHeight / rows;
+
+        for (int row = 0; row < rows; ++row) {
+            for (int col = 0; col < cols; ++col) {
+                double temp = temperature[row * cols + col];
+                SDL_Color color = getTemperatureColor(temp, maxTemperature);
+                SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
+
+                SDL_Rect cellRect = { col * cellWidth, row * cellHeight, cellWidth, cellHeight };
+                SDL_RenderFillRect(renderer, &cellRect);
+            }
+        }
+
+        SDL_RenderPresent(renderer);
+    }
+
     // Calculates a color representation for a given temperature
     SDL_Color Visualization::getTemperatureColor(double temperature, double maxTemperature) {
         // Normalize the temperature to [0, 1]
