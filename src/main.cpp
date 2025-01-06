@@ -5,6 +5,8 @@
 #include "Result2D.h"
 
 int SDL_main(int argc, char* argv[]){
+    (void)argc; 
+    (void)argv; 
     try{
         // Materials from Table 2
         std::vector<heat::Material> materials = {
