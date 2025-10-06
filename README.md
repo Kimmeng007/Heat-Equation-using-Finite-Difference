@@ -17,10 +17,10 @@ $$
 
 where:
 - u(x, t) : temperature field  
-- $$ \lambda $$: thermal conductivity  
-- $$ \rho \): density of the material  
-- \( c \): specific heat capacity  
-- \( F(x, y) \): heat source term  
+- λ : thermal conductivity  
+- ρ : density of the material  
+- c : specific heat capacity  
+- F(x, y) : heat source term  
 
 ---
 
