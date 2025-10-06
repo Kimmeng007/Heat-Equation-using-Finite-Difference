@@ -11,13 +11,13 @@ The code is developed in **C++**, with **graphical animations rendered using the
 ## Scientific Background
 The heat equation is a partial differential equation defined as:
 
-\[
+$$
 \frac{\partial u}{\partial t} = \frac{\lambda}{\rho c} \nabla^2 u + \frac{F(x, y)}{\rho c}
-\]
+$$
 
 where:
-- \( u(x, t) \): temperature field  
-- \( \lambda \): thermal conductivity  
+- $ u(x, t) $: temperature field  
+- $ \lambda $: thermal conductivity  
 - \( \rho \): density of the material  
 - \( c \): specific heat capacity  
 - \( F(x, y) \): heat source term  
@@ -71,8 +71,8 @@ To compile the code:
 3. To display: ./prog.exe
 
 ## Authors
-HONG Kimmeng, KOH Tito
-Supervisor: Prof. Vincent Torri
-École Nationale Supérieure d’Informatique pour l’Industrie et l’Entreprise (ENSIIE)
+HONG Kimmeng, KOH Tito \\
+Supervisor: Prof. Vincent Torri \\
+École Nationale Supérieure d’Informatique pour l’Industrie et l’Entreprise (ENSIIE) \\
 Academic Year: 2024–2025
 
