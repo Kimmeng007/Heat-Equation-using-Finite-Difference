@@ -71,8 +71,11 @@ To compile the code:
 3. To display: ./prog.exe
 
 ## Authors
-HONG Kimmeng, KOH Tito \\
-Supervisor: Prof. Vincent Torri \\
-École Nationale Supérieure d’Informatique pour l’Industrie et l’Entreprise (ENSIIE) \\
+HONG Kimmeng, KOH Tito
+
+Supervisor: Prof. Vincent Torri
+
+École Nationale Supérieure d’Informatique pour l’Industrie et l’Entreprise (ENSIIE) 
+
 Academic Year: 2024–2025
 
