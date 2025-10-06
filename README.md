@@ -16,8 +16,8 @@ $$
 $$
 
 where:
-- $$ u(x, t) $$: temperature field  
-- $ \lambda $: thermal conductivity  
+- u(x, t) : temperature field  
+- $$ \lambda $$: thermal conductivity  
 - $$ \rho \): density of the material  
 - \( c \): specific heat capacity  
 - \( F(x, y) \): heat source term  
