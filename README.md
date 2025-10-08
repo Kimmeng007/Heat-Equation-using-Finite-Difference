@@ -1,8 +1,7 @@
 # Heat Equation 
 
 ## Description
-This project implements a **numerical simulation of the heat equation** in **1D (rod)** and **2D (plate)** using the **implicit finite difference method**.  
-The goal is to model **heat propagation** in various materials and observe the **temperature evolution** under the influence of localized heat sources.
+This project implements a **numerical simulation of the heat equation** in **1D (rod)** and **2D (plate)** using the **implicit finite difference method**. The goal is to model **heat propagation** in various materials and observe the **temperature evolution** under the influence of localized heat sources.
 
 The code is developed in **C++**, with **graphical animations rendered using the SDL library** to visualize the results.
 
