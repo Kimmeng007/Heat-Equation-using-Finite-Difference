@@ -57,6 +57,6 @@ To compile the code:
 2. This command :  g++ -g -Wall -Wextra -o prog *.cpp $(pkg-config --cflags --libs sdl2)
 3. To display: ./prog.exe
 
-## Team
+## Authors
 HONG Kimmeng, KOH Tito
 
